@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="../Main folder/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+  </head>
+  <body>
+
+    <div class="contact-section">
+      <div class="contact-info">
+        <div><i class="fas fa-map-marker-alt"></i>Kathmandu</div>
+        <div><i class="fas fa-envelope"></i>deshsan96@email.com</div>
+        <div><i class="fas fa-phone"></i>+977 9844602966</div>
+      </div>
+      <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form class="contact" action="" method="post">
+          <input type="text" name="name" class="text-box" placeholder="Your Name" required>
+          <input type="email" name="email" class="text-box" placeholder="Your Email" required>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <input type="submit" name="submit" class="send-btn" value="Send">
+        </form>
+      </div>
+    </div>
+    <div>
+      <script>
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var message = document.getElementById("message").value;
+
+          if (!name || !email || !message) {
+            alert("Please fill in all the required fields.");
+            return;
+          }
+
+          // Submit the form data to a server-side script or a third-party service.
+
+          alert("Form submitted successfully!");
+        });
+
+      </script>
+    </div>
+
+  </body>
+</html>
